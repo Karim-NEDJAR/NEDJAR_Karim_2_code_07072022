@@ -1,22 +1,75 @@
+/********* DESKTOP FIRST  ***/
 html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-    }
-  
-/* 
-body{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+@media screen and (min-width: 992px) {
+  /*  propriétés CSS (DESKTOP) */
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /*  propriétés CSS (tablettes)) */
+}
+
+@media screen and (max-width: 767px) {
+  /*  propriétés CSS (téléphones)) */
+}
+
+body {
   font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  background-color: green;
+  border: 1px solid purple;
+}
+header {
+
+}
+section.criteres {
+  border: 2px dotted black;
+  background-color: #f2f2f2;;
+}
+
+section.hebergement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px dashed red;
+  background-color: goldenrod;
+}
+aside {
+  background-color: chocolate;
+
+}
+
+footer{
+  background-color: blueviolet;
+}
+
+
+
+
+/*
+.p2blue{
+  color: #0065FC;
+}
+.p2lightblue{
+  color:#DEEBFF; 
+}
+.p2greybackground{
+  color: #f2f2f2;
 }
 */
 
-/*
-.box {
-    display: flex;
-    } 
-    */
