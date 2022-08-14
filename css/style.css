@@ -1,4 +1,4 @@
-/********* DESKTOP FIRST  ***/
+/********* B O X - S I Z I N G  ***/
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,51 +13,260 @@ html {
   box-sizing: inherit;
 }
 
+/****************MEDIA QUERIES à la fin du fichier ************************/
 
-@media screen and (min-width: 992px) {
-  /*  propriétés CSS (DESKTOP) */
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  /*  propriétés CSS (tablettes)) */
-}
-
-@media screen and (max-width: 767px) {
-  /*  propriétés CSS (téléphones)) */
-}
-
-body {
+/***** REGLES GENERALES - REGLES GENERALES  ******/
+*,
+*:after,
+*:before {
   font-family: 'Raleway', sans-serif;
 }
 
 .wrapper {
-  background-color: green;
-  border: 1px solid purple;
+  width: 95%;
+  margin: auto;
 }
-header {
+
+/***** HEADER  HEADER  HEADER  HEADER ******/
+
+
+
+
+.logo {
+  width: 200px;
+  /*display: flex;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+  bottom: 0px;*/
+  height: 40px;
+}
+
+nav div {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  /*list-style-type: none;*/
 
 }
+
+
+header div img {
+  width: 60px;
+
+}
+
+nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+  border-top: 0px;
+}
+
+nav a:hover {
+  color: #0065FC;
+  font-weight: bold;
+}
+
+
+
+section {}
+
+/***** SECTION CRITERES VILLE  - SECTION CRITERES VILLE   ******/
 section.criteres {
-  border: 2px dotted black;
-  background-color: #f2f2f2;;
+  /*border: 1px solid black; */
 }
 
+.criteres h1 {
+  font-size: 25px;
+}
+
+form {
+  height: 30px;
+  /*border: 1px  dashed black;*/
+  /*vertical-align: middle;*/
+}
+
+.formulaire {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.fa-solid {
+  background-color: #f2f2f2;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.rechercher_btn {
+  background-color: #0065FC;
+  color: white;
+  border: 0px solid #0065FC;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 30px;
+  position: relative;
+  top: 0px;
+}
+
+form input {
+  height: 30px;
+  font-size: 18px;
+  position: relative;
+  top: 0px;
+  /*font-weight: bold;*/
+}
+
+.filtres {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  border: 1px dotted red;
+}
+
+.trois-choix {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  border: 1px solid blueviolet;
+}
+
+.trois-choix p {
+  text-align: center;
+  border: 1px solid blue;
+}
+
+/***** SECTION HEBERGEMENTS  - SECTION HEBERGEMENTS   ******/
 section.hebergement {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: 2px dashed red;
-  background-color: goldenrod;
+  flex-flow: row wrap-reverse;
+  border: 1px solid red;
+  justify-content: space-between;
+  background-color: #f2f2f2;
 }
+
+/***** SOUS-SECTION MAIN  (IN SECTION HEBERGEMENTS)   ******/
+main {
+  border: 1px solid blue;
+  background-color: #f2f2f2;
+  ;
+}
+
+/***** SOUS-SECTION ASIDE  (IN SECTION HEBERGEMENTS)   ******/
 aside {
-  background-color: chocolate;
+  border: 1px solid green;
+  background-color: #f2f2f2;
 
 }
 
-footer{
-  background-color: blueviolet;
+/***** SECTION FOOTER -  SECTION FOOTER - SECTION FOOTER  ******/
+footer {
+  background-color: #f2f2f2;
 }
 
+/**************** M E D I A    Q U E R I E S ****************/
+/*** D E S K T O P S ****/
+@media screen and (min-width: 992px) {
+  .hebergements:hover {
+    border-top: 2px solid #0065FC;
+  }
+
+  .activites:hover {
+    border-top: 2px solid #0065FC;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+}
+
+/***************/
+
+/*** T A B L E T T E S ****/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+
+  .hebergements:hover {
+    text-decoration: overline;
+    color: #0065FC;
+  }
+
+  .activites:hover {
+    text-decoration: overline;
+    color: #0065FC;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+}
+
+/***************/
+
+/*** T E L E P H O N E S *********************/
+@media screen and (max-width: 767px) {
+
+  /**** dans la réalité HOOVER n'a aucune utilité 
+  pour la plupart des téléphones et tablettes 
+  (pas de dispositif de pointage)*****/
+  .hebergements:hover {
+    border-bottom: 2px solid #0065FC;
+  }
+
+  .activites:hover {
+    border-bottom: 2px solid #0065FC;
+  }
+
+
+  .hebergements {
+    border-bottom: 2px solid #f2f2f2;
+  }
+
+  .activites {
+    border-bottom: 2px solid #f2f2f2;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+}
+
+/************ fin media queries **************************/
 
 
 
@@ -72,4 +281,3 @@ footer{
   color: #f2f2f2;
 }
 */
-
