@@ -29,16 +29,16 @@ html {
 
 /***** HEADER  HEADER  HEADER  HEADER ******/
 
-
+header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
 
 .logo {
   width: 200px;
-  /*display: flex;
-  justify-content:space-between;
-  align-items: center;
-  position: relative;
-  bottom: 0px;*/
   height: 40px;
 }
 
@@ -49,9 +49,7 @@ nav div {
   align-items: center;
   width: 150px;
   height: 40px;
-  /*list-style-type: none;*/
-
-}
+ }
 
 
 header div img {
@@ -86,54 +84,49 @@ section {}
 
 /***** SECTION CRITERES VILLE  - SECTION CRITERES VILLE   ******/
 section.criteres {
-  /*border: 1px solid black; */
+  border: 1px solid black; 
 }
 
 .criteres h1 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 form {
+  display: flex;
+  flex-flow: row nowrap;
   height: 30px;
-  /*border: 1px  dashed black;*/
-  /*vertical-align: middle;*/
-}
+  }
 
 .formulaire {
-  display: flex;
+  /*display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 30px;*/
 }
 
 
-.fa-solid {
-  background-color: #f2f2f2;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  font-size: 15px;
+.fa-solid, .fa-location-dot  {
+  background-color:#DEEBFF; 
+  min-width: 30px;
+    text-align: right;
+    font-size: 25px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+  
 }
 
-.rechercher_btn {
+input[type="submit"]  {
   background-color: #0065FC;
   color: white;
   border: 0px solid #0065FC;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  height: 30px;
-  position: relative;
-  top: 0px;
-}
+  /*height: 30px;*/
+ }
 
-form input {
-  height: 30px;
-  font-size: 18px;
-  position: relative;
-  top: 0px;
-  /*font-weight: bold;*/
-}
+ input[type="search"] {
+   font-size: 15px;
+ }
 
 .filtres {
   display: flex;
@@ -194,13 +187,6 @@ footer {
     border-top: 2px solid #0065FC;
   }
 
-  header {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-
 }
 
 /***************/
@@ -210,20 +196,15 @@ footer {
 
 
   .hebergements:hover {
-    text-decoration: overline;
+    border-top: 2px solid #0065FC;
+    border-bottom: 2px solid #0065FC;
     color: #0065FC;
   }
 
   .activites:hover {
-    text-decoration: overline;
+    border-top: 2px solid #0065FC;
+    border-bottom: 2px solid #0065FC;
     color: #0065FC;
-  }
-
-  header {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
   }
 
 }
@@ -233,9 +214,10 @@ footer {
 /*** T E L E P H O N E S *********************/
 @media screen and (max-width: 767px) {
 
-  /**** dans la réalité HOOVER n'a aucune utilité 
+  /**** dans la réalité HOVER n'a aucune utilité 
   pour la plupart des téléphones et tablettes 
   (pas de dispositif de pointage)*****/
+
   .hebergements:hover {
     border-bottom: 2px solid #0065FC;
   }
