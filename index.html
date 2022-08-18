@@ -9,61 +9,168 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" integrity="sha512-gRH0EcIcYBFkQTnbpO8k0WlsD20x5VzjhOA1Og8+ZUAhcMUCvd+APD35FJw3GzHAP3e+mP28YcDJxVr745loHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    -->
-        <title>Booki</title>
+
+    <title>Booki</title>
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- -----   HEADAR    ------- -->
         <header>
             <div class="logo"><img src="images/logo/booki.png" alt="Logo de Booki" />
             </div>
             <nav>
-                <div class="hebergements"> <a href="#">Hébergements</a></div>
-                <div class="activites"> <a href="#">Activités</a> </div>
+                <div class="nav-hebergements"> <a href="#section-h">Hébergements</a></div>
+                <div class="nav-activites"> <a href="#section-a">Activités</a> </div>
             </nav>
         </header>
-
+        <!-- -----section criteres  with formulaire1 (recherche / submit) and formulaire2 (checkbox / filtres) ------- -->
         <section class="criteres">
             <div>
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
-            <div class="formulaire">
-                <form method="post" action="traitement.php"><i class="fa-solid fa-location-dot"></i><input type="search"
-                        id="choix_ville" name="choix_ville" value="Marseille, France"><input type="submit"
-                        value="Rechercher ">
+            <div>
+                <form class="formulaire1" method="post" action="traitement.php"><span class="location">&#xf3c5</span>
+                    <input type="search" id="choix_ville" name="choix_ville" value="Marseille, France">
+                    <div class="submit-group">
+                        <input class="rechercher" type="submit" value="Rechercher ">
+                        <input class="magnify" type="submit" style="font-family: FontAwesome" value="&#xf002;">
+                    </div>
                 </form>
             </div>
-
-            <div class="filtres">
+            <div class="check-filtre">
                 <p>Filtres </p>
-                <div class="trois-choix">
-                    <p>Économique ---------------</p>
-                    <p>Familial -----------------</p>
-                    <p>Romantique ----------------</p>
-                </div>
+                <form class="formulaire2" method="post" action="#">
+                    <div> <input class="one-option" type="checkbox" name="eco" id="eco" />
+                        <label class="form2-lbl" for="eco"> <span
+                                class="form2-fontawesome-unicode">&#xf53a</span><span>&nbsp;&nbsp;
+                                Économique
+                                &nbsp;&nbsp; </span></label>
+                    </div>
+                    <div> <input class="one-option" type="checkbox" name="family" id="family" />
+                        <label class="form2-lbl" for="family"> <span class="form2-fontawesome-unicode">&#xe59d</span>
+                            <span> &nbsp;&nbsp;
+                                Familial
+                                &nbsp;&nbsp;</span> </label>
+                    </div>
+                    <div><input class="one-option" type="checkbox" name="romeo" id="romeo" />
+                        <label class="form2-lbl" for="romeo"> <span class="form2-fontawesome-unicode">&#xf004</span>
+                            <span> &nbsp;&nbsp;
+                                Romantique &nbsp;&nbsp; </span>
+                        </label>
+                    </div>
+                    <div>
+                        <input class="one-option" type="checkbox" name="pets" id="pets" />
+                        <label class="form2-lbl" for="pets"><span
+                                class="form2-fontawesome-unicode">&#xf6d3</span><span>&nbsp;&nbsp;Animaux
+                                autorisés &nbsp; &nbsp;</span>
+                        </label>
+                    </div>
+                </form>
+                <p class="more-than-500-p"><span class="info-ico"> &#xf129</span><span class="more-than-500-span">Plus
+                        de 500 logements sont disponibles dans cette ville</span> </p>
             </div>
         </section>
-        <section class="hebergement">
+        <!-- -----section hebergements with MAIN and ASIDE ------- -->
+        <section class="section-hebergements" id="section-h">
             <main>
-                <div> main in class hebergement , div 1 in main </div>
-                <div> main in class hebergement ,div 2 in mains </div>
-                <div> main in class hebergement , div 3 in main </div>
+                <h1> Hébergements à Marseille</h1>
+                <div class="conteneur-img-h">
+                    <div class="cadre-img-info-h">
+                        <div class="bloc-img-h">
+                            <img class="img-h" src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+
+                        </div>
+                        <div class="bloc-info-h">
+                            <p>1 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                    <div class="cadre-img-info-h">
+                        <div class="bloc-img-h">
+                            <img class="img-h" src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+
+                        </div>
+                        <div class="bloc-info-h">
+                            <p>2 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+
+                    <div class="cadre-img-info-h">
+                        <div class="bloc-img-h">
+                            <img class="img-h" src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+
+                        </div>
+                        <div class="bloc-info-h">
+                            <p>3 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                    <div class="cadre-img-info-h">
+                        <div class="bloc-img-h">
+                            <img class="img-h" src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+                        </div>
+                        <div class="bloc-info-h">
+                            <p>4 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                    <div class="cadre-img-info-h">
+                        <div class="bloc-img-h">
+                            <img class="img-h" src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+                        </div>
+                        <div class="bloc-info-h">
+                            <p>5 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <aside>
-                <p> p in aside p in aside p in aside p in aside p in aside p in aside </p>
+                <h1> Les plus populaires </h1>
+                <div class="bloc-img-info-aside">
+                    <div class="cadre-img-aside">
+                        <div class="bloc-img-aside">
+                            <img class="img-aside"
+                                src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+                        </div>
+                        <div class="bloc-info-aside">
+                            <p>10 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                    <div class="cadre-img-aside">
+                        <div class="bloc-img-aside">
+                            <img class="img-aside"
+                                src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                alt="Auberge La Cannebière " />
+                        </div>
+                        <div class="bloc-info-aside">
+                            <p>11 - Auberge La Cannebière</p>
+                            <p> Nuit à partir de <strong>25€</p>
+                        </div>
+                    </div>
+                </div>
             </aside>
         </section>
-        <section class="activites">
+        <!-- -----section-activites  ------- -->
+        <section class="section-activites" id="section-a">
             <p> p in class activites </p>
         </section>
+        <!-- ----- footer  ------- -->
         <footer>
             <div> div in footer </div>
             <p> HEADER Media screen and (min-width: 992px). </p>
