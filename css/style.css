@@ -248,122 +248,172 @@ input[type="checkbox"] {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-    width: 20px;
-    height: 20px;;
+  width: 20px;
+  height: 20px;
+  ;
   font-size: 10px;
-  color:#0065FC;
+  color: #0065FC;
   border-radius: 50%;
-    border: 2px solid #f2f2f2;
-    margin-right: 10px;
-  }
+  border: 2px solid #f2f2f2;
+  margin-right: 10px;
+}
 
 .more-than-500-span {
   font-size: 12px;
   font-weight: normal;
   color: black;
 }
-.more-than-500-p{
+
+.more-than-500-p {
   width: 100%;
-  }
+}
 
 /***** SECTION HEBERGEMENTS  - SECTION HEBERGEMENTS   ******/
 
 .section-hebergements {
+  width: 100%;
   display: flex;
   flex-flow: row wrap-reverse;
-  border: 1px solid red;
+  border: 3px solid red;
   justify-content: space-between;
   background-color: #f2f2f2;
 }
 
 /***** SOUS-SECTION MAIN  (IN SECTION HEBERGEMENTS)   ******/
 main {
-  width:60%;
+  width: 66%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
-  border: 3px dashed fuchsia; 
+  border: 3px dashed fuchsia;
   background-color: #f2f2f2;
-  }
-.img-h{
-  width:224px;
-  }
-  main h1 {
-    font-size: 20px;
-  }
-.conteneur-img-h{
-  width:100%;
+}
+
+.h1-main {
+  font-size: 20px;
+}
+
+.conteneur-img-h {
+ /* width: 100%;*/
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
   border: 3px dashed black;
 }
-  .cadre-img-info-h{
-    display: flex;
-    flex-flow: column nowrap;
-        justify-content: center;
-    align-items: center;
-    width: 240px;
-    height: 192px;
-    border: 3px solid red;
-    background-color: aquamarine;
-          }
-  .bloc-img-h{
-    width: 224px;
-    height: 109px;
-    border: 2px solid indigo;
-    overflow: hidden;
+
+.cadre-img-info-h {
+  position: relative;
+  display: inline-block;
+ /* flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;*/
+  width: 245px;
+  height: 198px;
+  /*border: 10px solid white;*/
+  /*background-color: aquamarine;*/
+  margin: 25px;
+}
+
+.img-h {
+  position: relative;
+  /*top: -10px;*/
+  width: 245px; /** like:  .cadre-img-info-h**/
+  /*width: 224px;*/
+  height: 64%;
+  border: 5px solid white;
+  overflow: hidden;
+  border-top-left-radius: 25px ;
+  border-top-right-radius: 25px ;
+     }
+
+.image1-h , .image2-h , .image3-h , .image5-h    {
+ position: absolute;
+  top: -23px;
+  width: 245px; /** like:  .cadre-img-info-h**/
   }
-  .bloc-info-h{
-    width:224px;
-    height: 52px;
-    border: 2px solid orange;
-    font-size: 10px;
-  }
+.image4-h {
+  position: absolute;
+   top: -55px;
+      width: 245px; 
+   /*transform: scale(1.2);*/
+ }
+.image6-h {
+  position: absolute;
+   top: -130px;
+   width: 245px; 
+ }
+ 
+
+.bloc-info-h {
+  /*position: absolute;
+  bottom: -10px;*/
+  width: 100%;
+  /*width: 224px;*/
+  height: 36%;
+  border: 5px solid white;
+  font-size: 10px;
+  background-color: white;
+}
 
 /***** SOUS-SECTION ASIDE  (IN SECTION HEBERGEMENTS)   ******/
 aside {
-  width:100%;
+  /*width: 100%;*/
   display: flex;
   flex-flow: column nowrap;
-  border: 3px solid green;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 3px solid magenta;
   background-color: #f2f2f2;
 }
+
+.h1-aside {
+  font-size: 15px;
+}
+
+aside p {
+  font-size: 10px;
+  font-weight: bold;
+}
+
 .cadre-img-info-aside {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 330px;
+  height: 137px;
+  border: 2px solid blue;
+
+}
+
+.bloc-img-info-aside {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   width: 330px;
-  height: 137px;
-border: 2px solid blue;
-
+  border: 2px dotted maroon;
 }
-.bloc-img-info-aside {
+
+.cadre-img-aside {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  width: 330px;
-  height: 137px;
-border: 2px dotted maroon;
-}
-
-.bloc-img-aside {
-  width:132px;
-  height: 137px;
-   border: 3px dotted gray;
+  border: 3px dotted violet;
   overflow: hidden;
 }
-.img-aside{
-  width:132px;
-  height: 137px;
-  }
 
-  .bloc-info-aside{
-    width:330px;
-    height: 137px;
-       border: 2px solid orange;
-    font-size: 10px;
-  }
+.img-aside {
+  width: 130px;
+  height: 137px;
+  background-color: azure;
+}
+
+.bloc-info-aside {
+  width: 190px;
+  border: 2px solid orange;
+  font-size: 10px;
+}
 
 /***** SECTION FOOTER -  SECTION FOOTER - SECTION FOOTER  ******/
 footer {
