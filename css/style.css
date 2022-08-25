@@ -32,8 +32,9 @@ html {
 header {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -43,7 +44,8 @@ header {
 }
 
 nav div {
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +62,15 @@ header div img {
 nav {
   width: 300px;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
-  height: 40px;
+  align-items: flex-start;
+  /*height: 60px;*/
+}
+
+.nav-hebergements,
+.nav-activites {
+  height: 60px;
 }
 
 a,
@@ -84,9 +92,8 @@ nav a:hover {
 
 /***** SECTION CRITERES VILLE  - SECTION CRITERES VILLE   ******/
 
-
-.criteres h1 {
-  font-size: 24px;
+.titre-vacances-de-reve {
+  font-size: 28px;
 }
 
 .formulaire1 {
@@ -280,7 +287,7 @@ input[type="checkbox"] {
 
 .more-than-500-p {
   width: 100%;
-  }
+}
 
 /***** SECTION HEBERGEMENTS  - SECTION HEBERGEMENTS   ******/
 
@@ -291,7 +298,7 @@ input[type="checkbox"] {
   flex-flow: row wrap-reverse;
   justify-content: flex-start;
   align-items: flex-end;
-    background-color: white;
+  background-color: white;
 }
 
 .h1-main {
@@ -311,7 +318,7 @@ main {
   justify-content: flex-start;
   background-color: #f2f2f2;
   margin-right: 15px;
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 .conteneur-img-h {
@@ -325,38 +332,55 @@ main {
 .cadre-img-info-h {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   width: 318px;
   height: 260px;
-  border: 7px solid white; 
+  border: 7px solid white;
   margin: 15px;
-  border-top-left-radius: 28px; 
-  border-top-right-radius: 28px; 
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
   background-color: white;
-   }
+}
 
 .img-h {
   position: relative;
   width: 300px;
-    height: 64%;
-    overflow: hidden;
+  height: 64%;
+  overflow: hidden;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
 
-.image1-h,
-.image2-h,
-.image3-h,
-.image5-h {
+.image1-h {
   position: absolute;
-  top: -25px;
+  top: -24px;
   width: 300px;
- }
+  transform: scale(1, 1.12);
+}
+
+.image2-h {
+  position: absolute;
+  top: -27px;
+  width: 300px;
+}
+
+.image3-h {
+  position: absolute;
+  top: -23px;
+  width: 300px;
+  transform: scale(1.05,1.12);
+}
 
 .image4-h {
   position: absolute;
   top: -55px;
+  width: 300px;
+}
+
+.image5-h {
+  position: absolute;
+  top: -25px;
   width: 300px;
 }
 
@@ -371,7 +395,7 @@ main {
   width: 100%;
   height: 36%;
   line-height: 70%;
- }
+}
 
 
 .titre-img-h {
@@ -379,12 +403,13 @@ main {
   font-weight: bold;
 }
 
-.enabled-stars{
+.enabled-stars {
   font-family: FontAwesome;
   color: #0065FC;
   font-size: 15px;
 }
-.disabled-stars{
+
+.disabled-stars {
   font-family: FontAwesome;
   color: #D9D9D9;
   font-size: 15px;
@@ -413,7 +438,7 @@ aside {
   align-items: flex-start;
   background-color: #f2f2f2;
   margin-left: 15px;
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 .titre-h1-aside {
@@ -423,10 +448,11 @@ aside {
   justify-content: space-around;
   align-items: center;
 }
-.black-star{
+
+.black-star {
   font-family: FontAwesome;
   color: black;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .h1-aside {
@@ -457,7 +483,7 @@ aside {
   position: relative;
   width: 165px;
   height: 100%;
-   border: 5px solid white;
+  border: 5px solid white;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
@@ -510,15 +536,15 @@ aside {
 }
 
 .titre-info-aside {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
- }
+}
 
 .night-price {
   font-size: 20px;
   font-weight: normal;
- position: relative;
- top: -25px;
+  position: relative;
+  top: -25px;
 }
 
 
