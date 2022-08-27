@@ -34,13 +34,18 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 
 .logo {
   width: 200px;
   height: 40px;
+}
+
+
+.logo img {
+  width: 90px;
 }
 
 nav div {
@@ -54,18 +59,12 @@ nav div {
 }
 
 
-header div img {
-  width: 60px;
-
-}
-
 nav {
   width: 300px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  /*height: 60px;*/
 }
 
 .nav-hebergements,
@@ -88,13 +87,7 @@ nav a:hover {
 
 
 
-
-
 /***** SECTION CRITERES VILLE  - SECTION CRITERES VILLE   ******/
-
-.titre-vacances-de-reve {
-  font-size: 28px;
-}
 
 .formulaire1 {
   display: flex;
@@ -162,7 +155,7 @@ nav a:hover {
 }
 
 
-.form2-fontawesome-unicode {
+.fontawesome-unicode {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -177,7 +170,7 @@ nav a:hover {
   border-radius: 50%;
 }
 
-.one-option+label {
+.one-choice {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -189,16 +182,12 @@ nav a:hover {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   text-align: center;
-  border-top: 2px solid #f2f2f2;
-  border-bottom: 2px solid #f2f2f2;
-  border-right: 2px solid #f2f2f2;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  border-right: 2px solid #d9d9d9;
 }
 
-.one-option {
-  display: none;
-}
-
-.one-option:hover+label {
+.one-choice:hover {
   background-color: #DEEBFF;
   cursor: pointer;
   border-top: 2px solid #DEEBFF;
@@ -206,37 +195,23 @@ nav a:hover {
   border-right: 2px solid #DEEBFF;
 }
 
-.one-option:checked+label {
-  border-top: 2px solid #0065FC;
-  border-bottom: 2px solid #0065FC;
-  border-right: 2px solid #0065FC;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  color: #0065FC;
-}
-
-.one-option:checked+.form2-lbl .form2-fontawesome-unicode {
-  border: 2px solid #0065FC;
-}
-
 .submit-group {
   position: relative;
   height: 30px;
 }
 
-
-
 input[type="search"] {
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.check-filtre {
+.filtre {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .formulaire2 {
@@ -246,16 +221,6 @@ input[type="search"] {
   align-items: stretch;
 }
 
-.quatre-choix {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: stretch;
-  align-items: stretch;
-}
-
-input[type="checkbox"] {
-  list-style-image: none;
-}
 
 .more-than-500-p {
   display: flex;
@@ -270,12 +235,14 @@ input[type="checkbox"] {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  /***/
+  font-weight: bold;
   color: #0065FC;
   border-radius: 50%;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #d9d9d9;
   margin-right: 10px;
 }
 
@@ -289,11 +256,21 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+.titre-vacances-de-reve {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sous-titre-centre-ville {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 /***** SECTION HEBERGEMENTS  - SECTION HEBERGEMENTS   ******/
 
 .section-hebergements {
   width: 100%;
-  min-height: 850px;
+  /**min-height: 850px;**/
   display: flex;
   flex-flow: row wrap-reverse;
   justify-content: flex-start;
@@ -310,9 +287,8 @@ input[type="checkbox"] {
 
 /***** SOUS-SECTION MAIN  (IN SECTION HEBERGEMENTS)   ******/
 main {
-  height: 100%;
-  max-width: 66%;
-  min-width: 464px;
+  width: 60%;
+  /**suivant les pc : 1173 ou 782 px* */
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -324,95 +300,82 @@ main {
 .conteneur-img-h {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.trois-cartes {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 
 .cadre-img-info-h {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 318px;
-  height: 260px;
+  width: 25%;
+  height: 177px;
+  /**** pc1920---> 266px;* pc1280==177px;*/
   border: 7px solid white;
-  margin: 15px;
+  margin: 13px;
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
   background-color: white;
 }
 
+
 .img-h {
-  position: relative;
-  width: 300px;
-  height: 64%;
+  width: 100%;
+  height: 60%;
   overflow: hidden;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  position: relative; 
 }
 
-.image1-h {
-  position: absolute;
-  top: -24px;
-  width: 300px;
-  transform: scale(1, 1.12);
-}
-
-.image2-h {
-  position: absolute;
-  top: -27px;
-  width: 300px;
-}
-
-.image3-h {
-  position: absolute;
-  top: -23px;
-  width: 300px;
-  transform: scale(1.05,1.12);
-}
-
-.image4-h {
-  position: absolute;
-  top: -55px;
-  width: 300px;
-}
-
-.image5-h {
-  position: absolute;
-  top: -25px;
-  width: 300px;
-}
-
-.image6-h {
-  position: absolute;
-  top: -155px;
-  width: 300px;
+/****centrage de toutes les images verticalement et horizontalement, 
+  ce qui permet d'avoir le même visuel que  la maquette****/
+.image-h {
+  width: 100%;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
 .bloc-info-h {
   width: 100%;
-  height: 36%;
-  line-height: 70%;
+  height: 40%;
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: space-between;
+ align-items: flex-start;
 }
 
 
 .titre-img-h {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+}
+.night-price-h{
+  font-size: 14px;
 }
 
 .enabled-stars {
   font-family: FontAwesome;
   color: #0065FC;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .disabled-stars {
   font-family: FontAwesome;
   color: #D9D9D9;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
@@ -422,7 +385,7 @@ main {
 }
 
 .afficherplus {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   text-indent: 20px;
 }
@@ -430,8 +393,8 @@ main {
 
 /***** SOUS-SECTION ASIDE  (IN SECTION HEBERGEMENTS)   ******/
 aside {
-  height: 100%;
-  min-width: 464px;
+  width: 373px;
+  /* pc 1280px de large --> 373px // pc 1920px de large --> 560px; //40%; // proportions/maquette*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -452,11 +415,11 @@ aside {
 .black-star {
   font-family: FontAwesome;
   color: black;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .h1-aside {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -474,14 +437,18 @@ aside {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 414px;
-  height: 181px;
-  margin: 18px;
+  width: 80%;
+  /***pc1280----> width (306px);***/
+  /***pc1920----> 460px;***/
+  height: 128px;
+  /***pc1280----> height 128px;***/
+  /***pc 1920px--> 192px;**/
+  margin: 16px;
 }
 
 .img-aside {
-  position: relative;
-  width: 165px;
+  width: 40%;
+  /**178px; ou 118px**/
   height: 100%;
   border: 5px solid white;
   margin-top: 5px;
@@ -490,44 +457,29 @@ aside {
   overflow: hidden;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+  position: relative;
 }
-
-.image1-a {
-  height: 161px;
+/***malgré le centrage, une des images est insuffisamment large pour remplir la largeur du contenant, d'où le height: 130% au lieu de 100%;
+un width=100% aurait résolu le pb pour CETTE image mais aurait provoqué le problème inverse pour les 2 autres images (hauteur insuffisante)  
+cette solution évite de devoir traiter chaque image à part (solution générique)***/
+.image-a {
+  height: 130%;
   position: absolute;
-  left: -45px;
-  top: 5px;
-  overflow: hidden;
-  transform: scale(1.05, 1.15);
-}
-
-.image2-a {
-  height: 161px;
-  position: absolute;
-  left: -32px;
-  top: 6px;
-  overflow: hidden;
-  transform: scale(1.05, 1.15);
-}
-
-.image3-a {
-  height: 161px;
-  position: absolute;
-  right: 25px;
-  top: 5px;
-  overflow: hidden;
-  transform: scale(1.55, 1.62);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .bloc-info-aside {
-  width: 249px;
+  width: 60%;
+  /**282px ou 188px*/
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   border: 5px solid white;
   background-color: white;
-  font-size: 10px;
+  /*font-size: 10px;*/
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -535,16 +487,18 @@ aside {
   border-top-right-radius: 20px;
 }
 
-.titre-info-aside {
-  font-size: 22px;
-  font-weight: bold;
+.title-price-aside {
+   /**********/
 }
 
-.night-price {
-  font-size: 20px;
+.titre-info-aside {
+  font-size: 18px;
+  font-weight: bold;
+  }
+
+.night-price-aside {
+  font-size: 14px;
   font-weight: normal;
-  position: relative;
-  top: -25px;
 }
 
 
