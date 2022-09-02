@@ -13,7 +13,7 @@ html {
   box-sizing: inherit;
 }
 
-/****************MEDIA QUERIES à la fin du fichier ************************/
+/**************** ( voir MEDIA QUERIES à la fin du fichier) ************************/
 
 /***** REGLES GENERALES - REGLES GENERALES  ******/
 *,
@@ -96,19 +96,6 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.formulaire2 div {
-  display: block;
-}
-
-.form2-lbl {
-  display: flex;
-  flex-flow: row nowrap;
-  border-bottom: #f2f2f2;
-  border-top: #f2f2f2;
-  border-right: #f2f2f2;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
 
 
 .location {
@@ -270,11 +257,10 @@ input[type="search"] {
 
 .section-hebergements {
   width: 100%;
-  /**min-height: 850px;**/
-  display: flex;
-  flex-flow: row wrap-reverse;
-  justify-content: flex-start;
-  align-items: flex-end;
+    display: flex;
+  flex-flow: row nowrap;
+    justify-content: flex-start;
+  align-items: flex-start;
   background-color: white;
 }
 
@@ -285,76 +271,84 @@ input[type="search"] {
 }
 
 
-/***** SOUS-SECTION MAIN  (IN SECTION HEBERGEMENTS)   ******/
+/*****  MAIN     (IN SECTION HEBERGEMENTS)   ******/
 main {
   width: 60%;
-  /**suivant les pc : 1173 ou 782 px* */
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  background-color: #f2f2f2;
-  margin-right: 15px;
-  border-radius: 25px;
-}
-
-.conteneur-img-h {
-  width: 100%;
-  display: flex;
+   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: #f2f2f2;
+    border-radius: 25px;
 }
 
-.trois-cartes {
+.conteneur-cards-h {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+   justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+
 }
 
+.card-link-h {
+  display: inline-block;
+  width: calc((100%-30px)/3);
+  }
 
-.cadre-img-info-h {
+.card-h {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 25%;
-  height: 177px;
-  /**** pc1920---> 266px;* pc1280==177px;*/
-  border: 7px solid white;
-  margin: 13px;
-  border-top-left-radius: 28px;
-  border-top-right-radius: 28px;
+  width: 100%;
+    border: 5px solid white;
+  margin: 10px;
+  border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
   background-color: white;
 }
 
 
-.img-h {
+.card-img-h {
   width: 100%;
   height: 60%;
   overflow: hidden;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-left: 2px;
   border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  position: relative; 
+    border-top-right-radius: 25px;
+  position: relative;
 }
 
-/****centrage de toutes les images verticalement et horizontalement, 
-  ce qui permet d'avoir le même visuel que  la maquette****/
-.image-h {
+picture.image-h {
   width: 100%;
-    position: absolute;
+}
+
+
+
+picture.image-h img {
+  width: 100%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
 }
 
 
-.bloc-info-h {
+.card-info-h {
   width: 100%;
   height: 40%;
- display: flex;
- flex-flow: column nowrap;
- justify-content: space-between;
- align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 
@@ -362,8 +356,10 @@ main {
   font-size: 16px;
   font-weight: bold;
 }
-.night-price-h{
+
+.night-price-h {
   font-size: 14px;
+  font-weight: normal;
 }
 
 .enabled-stars {
@@ -391,16 +387,16 @@ main {
 }
 
 
-/***** SOUS-SECTION ASIDE  (IN SECTION HEBERGEMENTS)   ******/
+/*****  ASIDE      (IN SECTION HEBERGEMENTS)   ******/
 aside {
-  width: 373px;
-  /* pc 1280px de large --> 373px // pc 1920px de large --> 560px; //40%; // proportions/maquette*/
-  display: flex;
+  width: 40%;
+  max-width: 373px;
+    display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #f2f2f2;
-  margin-left: 15px;
+  margin-left: 20px;
   border-radius: 25px;
 }
 
@@ -423,33 +419,35 @@ aside {
   font-weight: bold;
 }
 
-.bloc-img-info-aside {
-  width: 100%;
+.conteneur-cards-a {
+  width: 90%;
+  /** relativement au conteneur parent 
+  lui-même étant à 40%  du width parent**/
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
 }
 
+.card-link-a {
+  display: inline-block;
+  width: 96%;
+  /** voir height dans les MQ**/
+  margin: auto;
+}
 
-.cadre-img-aside {
+.card-a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
-  width: 80%;
-  /***pc1280----> width (306px);***/
-  /***pc1920----> 460px;***/
-  height: 128px;
-  /***pc1280----> height 128px;***/
-  /***pc 1920px--> 192px;**/
-  margin: 16px;
-}
+  align-items: flex-start;
+  width: 100%;
+    margin: 4%;
+  }
 
-.img-aside {
+.card-img-a {
   width: 40%;
-  /**178px; ou 118px**/
-  height: 100%;
+   height: 100%;
   border: 5px solid white;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -459,42 +457,53 @@ aside {
   border-top-left-radius: 20px;
   position: relative;
 }
-/***malgré le centrage, une des images est insuffisamment large pour remplir la largeur du contenant, d'où le height: 130% au lieu de 100%;
-un width=100% aurait résolu le pb pour CETTE image mais aurait provoqué le problème inverse pour les 2 autres images (hauteur insuffisante)  
-cette solution évite de devoir traiter chaque image à part (solution générique)***/
-.image-a {
-  height: 130%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+picture.image-a {
+  height: 100%;
 }
 
-.bloc-info-aside {
+picture.image-a img {
+  width: 100%;
+  /*** height in px ===>> see the MQ ***/
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.35);
+}
+
+  /***** object-fit: contain;
+  object-position: center;
+    DIDN'T solve the ratio pb !!! so i used  height: 135%; 
+  the same result can be reached with transform: scale(1.35) 
+  instead of  height: 135%*****/
+  
+  /**/
+
+.card-info-a {
   width: 60%;
-  /**282px ou 188px*/
-  height: 100%;
+    height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   border: 5px solid white;
   background-color: white;
-  /*font-size: 10px;*/
-  margin-top: 5px;
+    margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
 
+/***
 .title-price-aside {
-   /**********/
+ 
 }
+**/
 
 .titre-info-aside {
   font-size: 18px;
   font-weight: bold;
-  }
+}
 
 .night-price-aside {
   font-size: 14px;
@@ -507,8 +516,11 @@ footer {
   background-color: #f2f2f2;
 }
 
+
+
 /**************** M E D I A    Q U E R I E S ****************/
-/*** D E S K T O P S ****/
+
+/*** beginning of D E S K T O P S ****/
 @media screen and (min-width: 992px) {
   .nav-hebergements:hover {
     border-top: 2px solid #0065FC;
@@ -525,9 +537,26 @@ footer {
   .rechercher {
     visibility: visible;
   }
+
+
+  .card-h {
+    height: 177px;
+  }
+
+  .card-link-a {
+    height: 118px;
+    margin-bottom: 3vh;
+  }
+
+  .card-a,
+  .card-a img {
+    height: 118px;
+  }
+
+
 }
 
-/***************/
+/***** end of DESKTOP **********/
 
 /*** T A B L E T T E S ****/
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -553,17 +582,40 @@ footer {
     visibility: visible;
   }
 
+  /************** D I M E N S I O N N E M E N T S***/
+  .card-link-h {
+    width: calc((100%-30px)/2);
+    margin: auto;
+  }
+
+  .card-link-h,
+  .card-h {
+    height: 177px;
+
+  }
+
+
+  .card-link-a {
+    margin-bottom: 8vh;
+  }
+
+  .card-link-a,
+  .card-a {
+    height: 118px;
+  }
+
+
+
+
+
 }
 
-/***************/
+/*****end of   T A B L E T T E S**********/
 
-/*** T E L E P H O N E S *********************/
+/*** beginning of T E L E P H O N E S *********************/
 @media screen and (max-width: 767px) {
 
-  /**** dans la réalité HOVER n'a aucune utilité 
-  pour la plupart des téléphones et tablettes 
-  (pas de dispositif de pointage)*****/
-
+  
   .nav-hebergements:hover {
     border-bottom: 2px solid #0065FC;
   }
@@ -603,8 +655,45 @@ footer {
     visibility: hidden;
   }
 
+  /*****basculement de l'aside à partir de la vue téléphone *********/
+  .section-hebergements {
+    width: 100%;
+        display: flex;
+    flex-flow: row wrap-reverse;
+       justify-content: flex-start;
+    align-items: flex-end;
+    background-color: white;
+  }
 
+  /**on force les cartes à être l'une  au-dessus de l'autre**/
+  .conteneur-cards-h {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .card-link-h {
+    width: 90%;
+  }
+
+  .card-h {
+    height: 266px;
+  }
+
+  
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  aside {
+    width: 90%;
+    margin: auto;
+  }
 
 }
 
-/************ fin media queries **************************/
+/*** END  of T E L E P H O N E S *********************/
+
+/************ END  of   media queries **************************/
