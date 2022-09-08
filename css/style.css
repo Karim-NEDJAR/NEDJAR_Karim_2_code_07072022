@@ -13,9 +13,7 @@ html {
   box-sizing: inherit;
 }
 
-/**************** ( voir MEDIA QUERIES à la fin du fichier) ************************/
-
-/***** REGLES GENERALES - REGLES GENERALES  ******/
+/***** REGLES GENERALES  ******/
 *,
 *:after,
 *:before {
@@ -27,7 +25,7 @@ html {
   margin: 1%;
 }
 
-/***** HEADER  HEADER  HEADER  HEADER ******/
+/***** HEADER  ******/
 
 header {
   width: 100%;
@@ -87,7 +85,7 @@ nav a:hover {
 
 
 
-/***** SECTION CRITERES VILLE  - SECTION CRITERES VILLE   ******/
+/***** SECTION CRITERES      ******/
 
 .formulaire1 {
   display: flex;
@@ -256,7 +254,7 @@ input[type="search"] {
   font-weight: normal;
 }
 
-/***** SECTION HEBERGEMENTS  - SECTION HEBERGEMENTS   ******/
+/***** SECTION HEBERGEMENTS   ******/
 
 .section-hebergements {
   width: 100%;
@@ -283,7 +281,7 @@ input[type="search"] {
 }
 
 
-/*****  MAIN     (IN SECTION HEBERGEMENTS)   ******/
+/*****  MAIN     ******/
 main {
   width: 65%;
   display: flex;
@@ -411,11 +409,9 @@ main {
 }
 
 
-/*****  ASIDE      A S I D E  A S I D E   A S I D E   
-A S I D E   A S I D E   A S I D E  A S I D E  ******/
+/*****  ASIDE     ******/
 aside {
   width: 32%;
-  /*28vw ;*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -513,12 +509,13 @@ aside {
   margin-right: 5px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+  overflow: hidden;
 }
 
+/** pas encore exploitée**/
 /***
 .titre&prix-a {
- 
-}
+ }
 **/
 
 .titre-img-a {
@@ -540,6 +537,7 @@ footer {
 
 
 /**************** M E D I A    Q U E R I E S ****************/
+
 
 /**MQ:  DESKTOP ****/
 @media screen and (min-width: 992px) {
@@ -593,7 +591,6 @@ footer {
 
   aside {
     width: 36%;
-    /* min-width: 34.5vw;*/
   }
 
   /**** MQ: TAB  *****/
@@ -601,9 +598,7 @@ footer {
   n'y ait de la place que pour 2 cartes */
   .card-h {
     width: calc(100%/2.35);
-    /* calc((100%-60px)/2);*/
     height: 20vw;
-    /*calc((70vw-30px)/2);  */
     margin-bottom: 2vw;
   }
 
@@ -702,13 +697,14 @@ footer {
     font-size: 32px;
   }
 
-  /***MQ: TEL: le titre reste seul sur la ligne***/
+  /***MQ: TEL: le titre reste seul sur la ligne*  **/
   .titre-filtres {
     width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
-  /*****basculement de l'aside à partir de la vue téléphone
-  donc arrêt du rétrecissement des images de la vue tablette   *********/
+  /***** MQ: TEL: basculement de l'aside  vers le haut   *********/
   .section-hebergements {
     width: 100%;
     display: flex;
@@ -722,20 +718,27 @@ footer {
   les unes au-dessus des autres **/
   .conteneur-cards-h {
     width: 100%;
-    min-width: 480px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
   }
 
+  .conteneur-cards-a {
+    width: 100%;
+  }
+
   /* MQ * TEL : la carte unique prend 
-   presque toute la largeur***/
+   presque toute la largeur, ajout d'ombres ***/
   .card-h {
     width: 90%;
     height: 60vw;
     max-width: none;
     max-height: none;
+    box-shadow: 10px 10px 30px #f0f0f0,
+      10px 10px 30px #f0f0f0,
+      -10px -10px 30px #f0f0f0,
+      -10px -10px 30px #f0f0f0;
   }
 
   .card-a {
@@ -748,13 +751,12 @@ footer {
 
   /** MQ: TEL:   taille  d'écriture***/
   .h1-h,
-  .h1-a,
-  .afficherplus {
+  .h1-a {
     font-size: 36px;
   }
 
   .afficherplus {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   /** MQ: TEL   ***/
@@ -764,7 +766,7 @@ footer {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: white;
     border-radius: 25px;
     margin: 0.8vw;
   }
@@ -772,7 +774,6 @@ footer {
   /** MQ: TEL   ***/
   aside {
     width: 90%;
-    min-width: 480px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -780,12 +781,12 @@ footer {
     background-color: #f2f2f2;
     margin-left: 20px;
     border-radius: 25px;
-    margin: 0.8vw;
+    margin: 1vw;
   }
 
   /** MQ: TEL   ***/
   .prix-info-h {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .prix-info-a {
@@ -793,21 +794,29 @@ footer {
     font-weight: normal;
   }
 
+  /** MQ: TEL   ***/
   .enabled-stars,
   .disabled-stars {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .titre-img-h {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .titre-img-a {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .div-form1 {
+    width: 90vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
   }
 
   input[type="search"] {
-    width: 85%;
+    width: 90%;
     font-size: 25px;
   }
 
