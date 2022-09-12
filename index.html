@@ -23,7 +23,7 @@
     <!-- --   HEADER    -- -->
     <header>
         <div class="logo">
-            <picture>
+            <picture class="picture-logo">
                 <source media="(min-width: 992px)" srcset="images/logo/Booki@3x.png">
                 <source media="(max-width: 991px)" srcset="images/logo/Booki.png">
                 <img src="images/logo/Booki.png" alt="Logo de Booki">
@@ -38,46 +38,40 @@
 
         <!-- -section criteres  -->
         <section class="criteres">
-            <div>
+            <div class="titre-et-sous-titre">
                 <h1 class="titre-vacances-de-reve">Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p class="sous-titre-centre-ville">En plein centre ville ou en pleine nature</p>
+                <h2 class="sous-titre-centre-ville">En plein centre ville ou en pleine nature</h2>
             </div>
-            <div class="div-form1">
+            <div class="saisie-ville">
                 <form class="formulaire1" method="post" action="traitement.php"><span class="location">&#xf3c5</span>
                     <input type="search" id="choix_ville" name="choix_ville" value="Marseille, France">
                     <div class="submit-group">
                         <input class="rechercher" type="submit" value="Rechercher ">
-                        <input class="magnify" type="submit" value="&#xf002;">
+                        <input class="loupe" type="submit" value="&#xf002;">
                     </div>
                 </form>
             </div>
             <div class="filtre">
-                <div class="titre-filtres">Filtres
-                </div>
+                <div class="titre-filtres">Filtres</div>
 
-                <a href="#">
-                    <div class="one-choice"> <span class="fontawesome-unicode">&#xf53a</span><span>&nbsp;&nbsp;
-                            Économique &nbsp;&nbsp; </span>
-                    </div>
+                <a href="#" class="one-choice choice1">
+
+                    <div class="fontawesome-unicode icone1">&#xf53a</div>
+                    <div class="titre-critere">Économique</div>
+
                 </a>
-                <a href="#">
-                    <div class="one-choice"><span class="fontawesome-unicode">&#xe59d</span>
-                        <span> &nbsp;&nbsp;
-                            Familial
-                            &nbsp;&nbsp;</span>
-                    </div>
+                <a href="#" class="one-choice choice2">
+                    <div class="fontawesome-unicode icone2">&#xe59d</div>
+                    <div class="titre-critere"> Familial</div>
                 </a>
 
-                <a href="#">
-                    <div class="one-choice"> <span class="fontawesome-unicode">&#xf004</span>
-                        <span> &nbsp;&nbsp;
-                            Romantique &nbsp;&nbsp; </span>
-                    </div>
+                <a href="#" class="one-choice choice3">
+                    <div class="fontawesome-unicode icone3">&#xf004</div>
+                    <div class="titre-critere">Romantique</div>
                 </a>
-                <a href="#">
-                    <div class="one-choice"><span class="fontawesome-unicode">&#xf6d3</span><span>&nbsp;&nbsp;Animaux
-                            autorisés &nbsp; &nbsp;</span>
-                    </div>
+                <a href="#" class="one-choice choice4">
+                    <div class="fontawesome-unicode icone4">&#xf6d3</div>
+                    <div class="titre-critere">Animaux autorisés</div>
                 </a>
 
             </div>
@@ -328,7 +322,9 @@
     <footer>
         <div> footer...</div>
     </footer>
-
+    <div class="trame">
+        <img src="../../Ressources Booki/Desktop-png-semi-transparence.png" alt="">
+    </div>
 </body>
 
 </html>

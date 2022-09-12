@@ -22,7 +22,8 @@ html {
 
 .wrapper {
   width: 100%;
-  padding: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 /***** HEADER  ******/
@@ -32,43 +33,69 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  height: 100px;
 }
 
 
 .logo {
-  width: 200px;
-  height: 40px;
+  width: 100px;
+  height: 100%;
+  margin-left: 54px;
+  padding-top: 42px;
 }
-
 
 .logo img {
-  width: 90px;
-}
-
-nav div {
-  font-size: 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 40px;
-}
-
-
-nav {
-  width: 300px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 97px;
+  height: 47px;
 }
 
 .nav-hebergements,
 .nav-activites {
-  height: 60px;
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  padding-top: 45px;
 }
+
+.nav-hebergements {
+  padding-left: 5px;
+  width: 46.7%;
+}
+
+.nav-activites {
+  padding-right: 30px;
+  width: 53.3%;
+}
+
+.titre-et-sous-titre {
+  padding-left: 20px;
+}
+
+.titre-vacances-de-reve {
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin: 25px 0 0 0;
+}
+
+.saisie-ville {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+nav {
+  width: 347px;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 
 a,
 a:link,
@@ -90,8 +117,7 @@ nav a:hover {
 .formulaire1 {
   display: flex;
   flex-flow: row nowrap;
-  height: 30px;
-  margin-bottom: 10px;
+  height: 50px;
 }
 
 
@@ -102,9 +128,10 @@ nav a:hover {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #DEEBFF;
-  width: 30px;
-  font-size: 15px;
+  background-color: #f2f2f2;
+  width: 60px;
+  height: 50px;
+  font-size: 18px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
@@ -114,15 +141,18 @@ nav a:hover {
   left: 0px;
   background-color: #0065FC;
   color: #f2f2f2;
+  font-weight: bold;
   border: 0px solid #0065FC;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;
-  height: 30px;
+  height: 50px;
+  width: 135px;
   z-index: 2;
+  font-size: 18px;
 }
 
-.magnify {
+.loupe {
   font-family: FontAwesome;
   font-size: 12px;
   position: absolute;
@@ -146,15 +176,18 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   font-family: FontAwesome;
-  font-size: 13px;
+  font-size: 20px;
   color: #0065FC;
   background-color: #DEEBFF;
   border: 3px solid #DEEBFF;
-  height: 31px;
-  width: 31px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
+  position: relative;
+  }
+.icone1{
+  left: -10px;
 }
-
 
 .filtre {
   width: 100%;
@@ -163,17 +196,28 @@ nav a:hover {
   justify-content: flex-start;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 20px 35px;
 }
 
+.titre-filtres {
+  /*font-size: 18px; */
+  /**hérité de filtre**/
+  margin-right: 5px;
+}
+
+.titre-critere {
+  font-size: 18px;
+}
 
 .one-choice {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  margin: 10px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -183,6 +227,26 @@ nav a:hover {
   border-bottom: 2px solid #d9d9d9;
   border-right: 2px solid #d9d9d9;
 }
+
+.choice1 {
+  width: 190px;
+  margin-left: 20px;
+  margin-right: 35px;
+}
+
+.choice2 {
+  margin-right: 50px;
+}
+
+.choice3 {
+  margin-right: 46px;
+}
+
+/*
+.choice4 {
+  
+}
+*/
 
 .one-choice:hover {
   background-color: #DEEBFF;
@@ -194,11 +258,14 @@ nav a:hover {
 
 .submit-group {
   position: relative;
-  height: 30px;
+  height: 50px;
 }
 
 input[type="search"] {
-  font-size: 20px;
+  width: 231px;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 10px;
 }
 
 
@@ -244,15 +311,15 @@ input[type="search"] {
   width: 100%;
 }
 
-.titre-vacances-de-reve {
-  font-size: 28px;
-  font-weight: bold;
+.sous-titre-centre-ville {
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 5px;
+  margin-top: 10px;
+  height: 30px;
+  margin-bottom: 5px;
 }
 
-.sous-titre-centre-ville {
-  font-size: 18px;
-  font-weight: normal;
-}
 
 /***** SECTION HEBERGEMENTS   ******/
 
@@ -548,7 +615,7 @@ footer {
     border-top: 3px solid #0065FC;
   }
 
-  .magnify {
+  .loupe {
     visibility: hidden;
   }
 
@@ -556,8 +623,39 @@ footer {
     visibility: visible;
   }
 
+  /** début du FIN FILIGRANE  **/
+  body {
+    position: relative;
+    width: 1440px;
+    margin: 0px;
+    height: 1884px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+  }
+
+  .wrapper {
+    z-index: 3;
+  }
+
+  .trame {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .trame img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  /** fin du FIN FILIGRANE  **/
 
 }
+
+/**desk*/
 
 
 /*** MQ: TAB ****/
@@ -576,7 +674,7 @@ footer {
     color: #0065FC;
   }
 
-  .magnify {
+  .loupe {
     visibility: hidden;
   }
 
@@ -670,8 +768,8 @@ footer {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    
-      }
+
+  }
 
   .logo {
     width: 120px;
@@ -680,12 +778,12 @@ footer {
     text-indent: 26px;
     margin-top: 20px;
     margin-bottom: 20px;
-         }
+  }
 
   .logo img {
     /*width: 90px;*/
     height: 100%;
-         }
+  }
 
   nav {
     width: 100%;
@@ -699,12 +797,12 @@ footer {
   }
 
   /*** MQ: TEL *************/
-  .magnify {
+  .loupe {
     visibility: visible;
     width: 40px;
     height: 40px;
   }
- 
+
   .rechercher {
     visibility: hidden;
   }
@@ -713,7 +811,7 @@ footer {
     max-width: none;
   }
 
-    .sous-titre-centre-ville {
+  .sous-titre-centre-ville {
     font-size: 20px;
   }
 
@@ -832,8 +930,9 @@ footer {
     font-size: 24px;
   }
 
-  .div-form1 {
-    width: 100%; /*90vw;*/
+  .saisie-ville {
+    width: 100%;
+    /*90vw;*/
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -850,7 +949,7 @@ footer {
     height: 40px;
   }
 
-  
+
 
   .location {
     width: 40px;
