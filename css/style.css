@@ -661,7 +661,7 @@ aside {
   font-weight: normal;
 }
 
-.appreciation-h {}
+/* .appreciation-h {} */
 
 
 .appreciation-a {
@@ -676,7 +676,6 @@ aside {
 /**ACTIVITES ***/
 .section-activites {
   width: 100%;
-  margin-top: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -686,13 +685,12 @@ aside {
 
 .titre-h1-activites {
   width: 100%;
-
+  margin: 40px 0 0 0;
 }
 
 .titre-h1-activites h1 {
   font-size: 22px;
-  margin: 40px 0;
-  padding-top: 9px;
+  padding-top: 7px;
 
 }
 
@@ -706,294 +704,230 @@ aside {
 }
 
 /**ACTIVITES ***/
+/**les 4 grandes cartes (grands conteneurs)**/
+
+.carte-1,
+.carte-2,
 .carte-3,
-.carte-1 {
+.carte-4 {
   width: 310px;
   height: 445px;
 }
 
-
-.carte-1-img {
-  width: 100%;
-  /*height: calc((390/445) * 100%);*/
-}
-.carte-3-img  {
-  width: 100%;
-  /*height: calc((390/445) * 100%);*/
+.carte-2,
+.carte-4 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
-.carte-3-titre {
+/**les 4  petites cartes (petits conteneurs)**/
+.carte-2-up,
+.carte-2-down,
+.carte-4-up,
+.carte-4-down {
   width: 100%;
- /* height: calc((55/445) * 100%);*/
-  padding: 4px 0 0 22px;
 }
 
-.carte-1-titre {
-  width: 100%;
-  /*height: calc((55/445) * 100%);*/
-  padding: 4px 0 0 20px;
+.carte-2-up {
+  height: 240px;
 }
 
-/**ACTIVITES ***/
-.carte-1-img img,
-.carte-2-down-img img,
-.carte-2-up-img img,
-.carte-3-img img,
-.carte-4-down-img img,
-.carte-4-up-img img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  /*
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  */
+.carte-2-down {
+  height: 165px;
+}
+
+.carte-4-up {
+  height: 195px;
+}
+
+.carte-4-down {
+  height: 210px;
 }
 
 /**ACTIVITES ***/
+/**le HAUT des cartes contenant les IMAGES  (au-dessus du titre)**/
+.carte-1-img,
+.carte-2-up-img,
+.carte-2-down-img,
+.carte-3-img,
+.carte-4-up-img,
+.carte-4-down-img {
+  width: 100%;
+}
+
+.carte-1-img,
+.carte-3-img {
+  height: calc((390/445) * 100%);
+}
+
+.carte-2-up-img {
+  height: calc((185/240) * 100%);
+}
+
+.carte-2-down-img {
+  height: calc((110/165) * 100%);
+}
+
+.carte-4-up-img {
+  height: calc((140/195) * 100%);
+}
+
+.carte-4-down-img {
+  height: calc((155/210) * 100%);
+}
+
+/**ACTIVITES ***/
+/** ci-dessous : utile si 
+on n'utilise  pas 
+object-fit: cover (pour le centrage)*/
+.carte-1-img,
+.carte-2-down-img,
+.carte-2-up-img,
+.carte-3-img,
+.carte-4-down-img,
+.carte-4-up-img {
+  position: relative;
+}
+
+/**ACTIVITES ***/
+/**le BAS  des cartes contenant les TITRES **/
 .carte-1-titre,
 .carte-2-down-titre,
 .carte-2-up-titre,
 .carte-3-titre,
 .carte-4-down-titre,
 .carte-4-up-titre {
-    font-size: 16px;
+  font-size: 16px;
   font-weight: bold;
+  width: 100%;
 }
 
-.carte-1-img,
-.carte-2-down-img,
-.carte-2-up-img,
-.carte-3-img,
-.carte-4-down-img,
-.carte-4-up-img {
-  position: relative;
+.carte-1-titre {
+  height: calc((55/445) * 100%);
+  padding: 27px 0 0 18px;
+}
+
+.carte-2-up-titre {
+  height: calc((55/240) * 100%);
+  padding: 22px 0 0 20px;
+}
+
+.carte-2-down-titre {
+  height: calc((55/165) * 100%);
+  padding: 27px 0 0 22px;
+}
+
+.carte-3-titre {
+  height: calc((55/445) * 100%);
+  padding: 27px 0 0 22px;
+}
+
+.carte-4-up-titre {
+  height: calc((55/195) * 100%);
+  padding: 27px 0 0 24px;
+}
+
+.carte-4-down-titre {
+  height: calc((55/210) * 100%);
+  padding: 27px 0 0 23px;
 }
 
 /**ACTIVITES ***/
+/** LES IMAGES elles-mêmes***/
+.carte-1-img img,
+.carte-2-down-img img,
+.carte-2-up-img img,
+.carte-3-img img,
+.carte-4-down-img img,
+.carte-4-up-img img {
+    height: 100%;
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
+ /*   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  **/
+  
+    /**utile si on n'utilise  pas 
+  object-fit: cover pour le centrage*/
+}
+
+/**ACTIVITES ***/
+/**les arrondis et les ombres ***/
 .carte-3,
 .carte-1,
 .carte-2-down,
 .carte-2-up,
 .carte-4-down,
 .carte-4-up {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-    box-shadow: 8px 8px 16px #eeeeee;
-}
-/**ACTIVITES ***/
-
-
-/**ACTIVITES ***/
-.carte-2,
-.carte-4 {
-  width: 310px;
-  height: 445px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-
-}
-
-.carte-2-up {
-  width: 100%;
-  height: 240px;
-}
-
-.carte-4-up {
-  width: 100%;
-  height: 195px;
-
-}
-/**ACTIVITES ***/
-.carte-2-up-img {
-  width: 100%;
-  }
-
-.carte-4-up-img {
-  width: 100%;
-  }
-
-.carte-2-up-titre {
-  width: 100%;
- /* height: calc((55/240) * 100%);*/
-  padding: 0 0 0 20px;
-}
-/**ACTIVITES ***/
-
-.carte-4-up-titre {
-  width: 100%;
- /* height: calc((55/195) * 100%);*/
-  padding: 4px 0 0 23px;
-}
-
-.carte-2-down {
-  width: 100%;
-  height: 165px;
-}
-
-.carte-4-down {
-  width: 100%;
-  height: 210px;
-}
-
-.carte-2-down-img {
-  width: 100%;
- /* height: calc((110/165) * 100%);*/
-}
-/**ACTIVITES ***/
-.carte-4-down-img {
-  width: 100%;
-  /*height: calc((155/210) * 100%);*/
-}
-
-.carte-2-down-titre {
-  width: 100%;
- /* height: calc((55/165) * 100%);*/
-  padding: 5px 0 0 22px;
-}
-
-.carte-4-down-titre {
-  width: 100%;
- /* height: calc((55/210) * 100%);*/
-  padding: 4px 0 0 23px;
+  background-color: white;
+  /*border-top-left-radius: 25px;
+  border-top-right-radius: 25px;*/
+  border-radius: 25px;
+  box-shadow: 8px 8px 8px #eeeeee;
 }
 
 
 /***** section  FOOTER  ******/
 footer {
   width: 100%;
-  height: 218px;
+  height: 215px;
   background-color: #f2f2f2;
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-right: 230px;
   padding-left: 50px;
-  padding-top: 3px;
+  padding-top: 30px;
+    
 }
 
-.a-propos {
-  width: 600px;
-  height: 100%;
-}
-
-.a-propos h2 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.a-propos p {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.nos-hebergements {
-  width: 600px;
-  height: 100%;
-  text-indent: -10px;
-}
-
-.nos-hebergements h2 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.nos-hebergements p {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.assistance {
-  width: 600px;
-  height: 100%;
-}
-
+/**typo**/
+.a-propos h2,
+.nos-hebergements h2,
 .assistance h2 {
   font-size: 18px;
   font-weight: bold;
 }
 
+.a-propos p,
+.nos-hebergements p,
 .assistance p {
   font-size: 16px;
   font-weight: normal;
 }
 
+/** DIMENSIONS **/
+/**calculées minimales de façon à garder 
+le plus d'espace vide intermédiaire */
 
-/** début du FILIGRANE  **/
-body {
-  position: relative;
-  width: 1440px;
-  margin: 0;
-  padding: 0;
-  height: 1890px;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
-/**  FILIGRANE  **/
-
-main,
-footer,
-footer div,
-aside,
-.section-hebergements,
-img,
-.card-a,
-.card-h,
-.card-info-a,
-.card-info-h,
-.card-img-a,
-.card-img-h,
-.carte-3-img,
-.carte-1-img,
-.carte-2-down-img,
-.carte-2-up-img,
-.carte-4-down-img,
-.carte-4-up-img {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-/**  FILIGRANE  **/
-.booky {
-  position: relative;
-  /**width: 1440px;*/
-  margin: 0;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 2;
-}
-
-/**  FILIGRANE  **/
-.trame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
+.a-propos {
+  width: 260px;
   height: 100%;
 }
 
-/**  FILIGRANE  **/
-.trame img {
-  position: relative;
-  width: 100%;
+.nos-hebergements {
+  width: 275px;
   height: 100%;
-  z-index: -1;
+  padding-left: 10px;
 }
 
-* img {
-  position: relative;
-  z-index: -1;
+.assistance {
+  width: 260px;
+  height: 100%;
+  padding-left: 10px;
 }
 
-/** fin du FILIGRANE  **/
-**/
+/***** fin  FOOTER  ******/
+
+
+
 /**************** MEDIA        QUERIES *********************/
 /**************** M E D I A    Q U E R I E S ****************/
 
@@ -1144,7 +1078,7 @@ img,
   }
 
   .logo img {
-        height: 100%;
+    height: 100%;
   }
 
   nav {
