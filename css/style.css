@@ -672,7 +672,6 @@ aside {
 
 /***** section  ACTIVITES   ******/
 
-
 /**ACTIVITES ***/
 .section-activites {
   width: 100%;
@@ -710,8 +709,9 @@ aside {
 .carte-2,
 .carte-3,
 .carte-4 {
-  width: 310px;
+  width: 302px;
   height: 445px;
+  margin-bottom: 40px;
 }
 
 .carte-2,
@@ -730,7 +730,7 @@ aside {
 }
 
 .carte-2-up {
-  height: 240px;
+  height: 236px;
 }
 
 .carte-2-down {
@@ -742,11 +742,12 @@ aside {
 }
 
 .carte-4-down {
-  height: 210px;
+  height: 209px;
 }
 
 /**ACTIVITES ***/
-/**le HAUT des cartes contenant les IMAGES  (au-dessus du titre)**/
+/**le HAUT des cartes contenant les IMAGES  
+(au-dessus du titre)**/
 .carte-1-img,
 .carte-2-up-img,
 .carte-2-down-img,
@@ -758,29 +759,26 @@ aside {
 
 .carte-1-img,
 .carte-3-img {
-  height: calc((390/445) * 100%);
+  height: calc((389/445) * 100%);
 }
 
 .carte-2-up-img {
-  height: calc((185/240) * 100%);
+  height: calc((180/236) * 100%);
 }
 
 .carte-2-down-img {
-  height: calc((110/165) * 100%);
+  height: calc((109/165) * 100%);
 }
 
 .carte-4-up-img {
-  height: calc((140/195) * 100%);
+  height: calc((139/195) * 100%);
 }
 
 .carte-4-down-img {
-  height: calc((155/210) * 100%);
+  height: calc((153/209) * 100%);
 }
 
 /**ACTIVITES ***/
-/** ci-dessous : utile si 
-on n'utilise  pas 
-object-fit: cover (pour le centrage)*/
 .carte-1-img,
 .carte-2-down-img,
 .carte-2-up-img,
@@ -788,6 +786,7 @@ object-fit: cover (pour le centrage)*/
 .carte-4-down-img,
 .carte-4-up-img {
   position: relative;
+  overflow: hidden;
 }
 
 /**ACTIVITES ***/
@@ -804,69 +803,98 @@ object-fit: cover (pour le centrage)*/
 }
 
 .carte-1-titre {
-  height: calc((55/445) * 100%);
+  height: calc((56/445) * 100%);
   padding: 27px 0 0 18px;
 }
 
 .carte-2-up-titre {
-  height: calc((55/240) * 100%);
-  padding: 22px 0 0 20px;
+  height: calc((56/236) * 100%);
+  padding: 27px 0 0 18px;
 }
 
 .carte-2-down-titre {
-  height: calc((55/165) * 100%);
-  padding: 27px 0 0 22px;
+  height: calc((56/165) * 100%);
+  padding: 27px 0 0 20px;
 }
 
 .carte-3-titre {
-  height: calc((55/445) * 100%);
-  padding: 27px 0 0 22px;
+  height: calc((56/445) * 100%);
+  padding: 27px 0 0 18px;
 }
 
 .carte-4-up-titre {
-  height: calc((55/195) * 100%);
-  padding: 27px 0 0 24px;
+  height: calc((56/195) * 100%);
+  padding: 27px 0 0 17px;
 }
 
 .carte-4-down-titre {
-  height: calc((55/210) * 100%);
-  padding: 27px 0 0 23px;
+  height: calc((56/209) * 100%);
+  padding: 27px 0 0 17px;
 }
 
 /**ACTIVITES ***/
-/** LES IMAGES elles-mêmes***/
+/**  arrondis des IMAGES ***/
 .carte-1-img img,
 .carte-2-down-img img,
 .carte-2-up-img img,
 .carte-3-img img,
 .carte-4-down-img img,
 .carte-4-up-img img {
-    height: 100%;
-  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+
+}
+
+/** positionnement des IMAGES ***/
+.carte-1-img img {
+  height: 120%;
+  width: 100%;
   object-fit: cover;
- /*   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  **/
-  
-    /**utile si on n'utilise  pas 
-  object-fit: cover pour le centrage*/
+}
+
+.carte-2-up-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+}
+
+.carte-2-down-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.carte-3-img img {
+  height: 120%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.carte-4-up-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 47% 0%;
+}
+
+.carte-4-down-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 47% 0%;
 }
 
 /**ACTIVITES ***/
-/**les arrondis et les ombres ***/
-.carte-3,
+/**les arrondis des conteneurs + les ombres ***/
 .carte-1,
 .carte-2-down,
 .carte-2-up,
+.carte-3,
 .carte-4-down,
 .carte-4-up {
   background-color: white;
-  /*border-top-left-radius: 25px;
-  border-top-right-radius: 25px;*/
   border-radius: 25px;
   box-shadow: 8px 8px 8px #eeeeee;
 }
@@ -877,7 +905,7 @@ footer {
   width: 100%;
   height: 215px;
   background-color: #f2f2f2;
-  margin-top: 70px;
+  margin-top: 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -885,7 +913,7 @@ footer {
   padding-right: 230px;
   padding-left: 50px;
   padding-top: 30px;
-    
+
 }
 
 /**typo**/
@@ -1256,3 +1284,57 @@ le plus d'espace vide intermédiaire */
 
 
 /************ END  of   media queries **************************/
+
+/** début du FILIGRANE  **/
+/*
+body {
+  position: relative;
+  width: 1440px;
+  margin: 0;
+  padding: 0;
+  height: 1890px;
+    z-index: 2;
+}
+
+.booky {
+  position: relative;
+  margin: 0;
+  padding: 0;
+    z-index: 2;
+}
+
+.trame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.trame img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+* img {
+  position: relative;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.carte-3,
+.carte-1,
+.carte-2-down,
+.carte-2-up,
+.carte-4-down,
+.carte-4-up {
+ /* opacity: 0.5;*/
+  background: none;
+}
+
+*/
+/** fin du FILIGRANE  **/
