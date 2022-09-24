@@ -342,7 +342,7 @@ input[type="search"] {
   margin-right: 10px;
 }
 
-.more-than-500-p {
+.more-than-500-box {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -351,7 +351,7 @@ input[type="search"] {
   margin: 25px 20px;
 }
 
-.more-than-500-span {
+.more-than-500-text {
   font-size: 16px;
   font-weight: normal;
   color: black;
@@ -719,6 +719,7 @@ aside {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  border-radius: 25px;
 }
 
 /**les 4  petites cartes (petits conteneurs)**/
@@ -957,8 +958,6 @@ le plus d'espace vide intermédiaire */
 
 
 /**************** MEDIA        QUERIES *********************/
-/**************** M E D I A    Q U E R I E S ****************/
-
 
 /**MQ:  DESKTOP ****/
 @media screen and (min-width: 992px) {
@@ -980,13 +979,11 @@ le plus d'espace vide intermédiaire */
 
 }
 
-/**desk*/
+/** fin MQ DESKTOP */
 
 
 /*** MQ: TAB ****/
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
-
   .nav-hebergements:hover {
     border-top: 3px solid #0065FC;
     border-bottom: 3px solid #0065FC;
@@ -1007,63 +1004,325 @@ le plus d'espace vide intermédiaire */
     visibility: visible;
   }
 
-  main {
-    width: 61%;
+  .section-hebergements {
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 0;
   }
 
+  /*** MQ: TAB ****/
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-hebergements,
+  .nav-activites {
+    font-size: 20px;
+  }
+
+  .titre-vacances-de-reve {
+    font-size: 28px;
+  }
+
+  .sous-titre-centre-ville {
+    font-size: 20px;
+  }
+
+  .criteres {
+    padding-left: 20px;
+    margin: 0 0 0 0;
+  }
+
+  .titre-filtres {
+    width: 100%;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .choice1 {
+    width: calc(1.25 * 200px);
+    margin-left: 0;
+    margin-right: 25px;
+    position: relative;
+  }
+
+  .one-choice {
+    margin-left: 0;
+    margin-right: 25px;
+    position: relative;
+  }
+
+  .choice2 {
+    width: calc(1.2 * 150px);
+  }
+
+  .choice3 {
+    width: calc(1.2 * 183px);
+  }
+
+  .choice4 {
+    width: calc(1.2 * 240px);
+
+  }
+
+  .icone1 {
+    left: -50px;
+  }
+
+  .icone2 {
+    left: -40px;
+  }
+
+  .icone3 {
+    left: -35px;
+  }
+
+  .icone4 {
+    left: -45px;
+  }
+
+  .more-than-500-text {
+    font-size: 18px;
+  }
+
+  .info-ico {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  /*** MQ: TAB ****/
+  .titre-et-sous-titre {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .saisie-ville {
+    padding-left: 0;
+  }
+
+  .filtre {
+    margin: 28px 0 15px 0;
+  }
+
+  .titre-filtres {
+    font-size: 20px;
+  }
+
+  input[type="search"] {
+    width: 260px;
+    font-size: 20px;
+  }
+
+  /*** MQ: TAB ****/
+  main {
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0 0 0 0;
+    background-color: white;
+  }
+
+  .titre-h1-h {
+    height: 50px;
+    margin: 0px 0 25px 0;
+    padding: 0 0 0 0;
+  }
+
+  .conteneur-cards-h {
+    width: calc(100vw - 40px);
+    padding: 0;
+    margin: 20px;
+
+  }
+
+  /*** MQ: TAB ****/
   aside {
-    width: 36%;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0 0 0 0;
+    border-radius: 0;
+  }
+
+  .conteneur-cards-a {
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+
+  .titre-h1-a {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin-top: 38px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  /*** MQ: TAB ****/
+  .section-activites {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 0;
+    background-color: #f2f2f2;
+  }
+
+  .titre-h1-activites h1 {
+    margin: 10px 0 30px 20px;
+    font-size: 28px;
+  }
+
+  .conteneur-cards-activites {
+    width: calc(100vw - 40px);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+
+  .carte-1,
+  .carte-2,
+  .carte-3,
+  .carte-4 {
+    width: calc((100vw - 60px) / 2);
+    height: calc(((100vw - 60px) / 2) * (445/302));
+  }
+
+  .carte-1-titre,
+  .carte-2-down-titre,
+  .carte-2-up-titre,
+  .carte-3-titre,
+  .carte-4-down-titre,
+  .carte-4-up-titre {
+    font-size: 22px;
+
+  }
+
+  /*** MQ: TAB ***************************/
+
+  footer {
+        width: calc(100vw - 40px);
+    height: 230px;
+    background-color: white;
+    margin: 20px 20px;
+    padding: 0 0 0 0;
+  }
+
+  .a-propos {
+    width: calc((100% - 205px) /2);
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+
+  .nos-hebergements {
+    width: 205px;
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+  }
+
+  .assistance {
+        width: calc((100% - 205px) /2);
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+
+  .a-propos h2,
+  .nos-hebergements h2,
+  .assistance h2,
+  .a-propos p,
+  .nos-hebergements p,
+  .assistance p {
+    font-size: 18px;
   }
 
   /**** MQ: TAB  *****/
-  /*  il faut dimensionner la largeur de façon à ce qu'il
-  n'y ait de la place que pour 2 cartes */
   .card-h {
-    width: calc(100%/2.35);
-    height: 20vw;
-    margin-bottom: 2vw;
+    width: calc((100vw - 60px) /2);
+    height: calc(((100vw - 60px) /2) * (200/245));
+    margin: 0 0 40px 0;
   }
 
   .titre-img-h {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   /***MQ: TAB**/
   .card-a {
-    width: 34vw;
-    max-width: 96%;
-    height: 14vw;
-    margin-bottom: 7vw;
+    width: calc(100vw - 40px);
+    max-width: none;
+    height: calc((100vw - 40px) * (145/345));
+    margin: 20px 0;
   }
 
   .titre-img-a {
-    font-size: 18px;
+    font-size: 24px;
+  }
+
+  .prix-info-a {
+    font-size: 22px;
   }
 
   .prix-info-h {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .enabled-stars,
   .disabled-stars {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /** MQ: TAB.:  taille  d'écriture***/
-  .h1-h,
+
   .afficherplus {
-    font-size: 25px;
+    font-size: 22px;
+    margin: 20px 0 20px 0px;
+    height: 25px;
+    padding: 0 0 0 20px;
+  }
+
+  .h1-h {
+    font-size: 28px;
+    margin-left: 20px;
   }
 
   .h1-a {
-    font-size: 25px;
+    font-size: 28px;
+  }
+
+  .black-star {
+    padding-right: 0;
   }
 
 
+  .carte-4-down-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 47% 0%;
+
+  }
+
 }
 
-/*** MQ: TEL *************/
+/***  FIN MQ: TAB ** **/
+
+/***  début MQ: TEL *************/
 @media screen and (max-width: 767px) {
+
   nav {
     width: 100%;
   }
@@ -1145,10 +1404,6 @@ le plus d'espace vide intermédiaire */
     visibility: hidden;
   }
 
-  aside {
-    max-width: none;
-  }
-
   .titre-et-sous-titre {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
@@ -1189,7 +1444,8 @@ le plus d'espace vide intermédiaire */
     margin: 0 0 0 0;
   }
 
-  /***** MQ: TEL: basculement de l'aside  vers le haut   *********/
+  /***** MQ: TEL: basculement de l'aside
+    vers le haut   *********/
   .section-hebergements {
     width: 100%;
     display: flex;
@@ -1197,11 +1453,12 @@ le plus d'espace vide intermédiaire */
     justify-content: center;
     align-items: flex-end;
     background-color: white;
+    padding: 15px 0 0 0;
   }
 
-  /** MQ:  TEL***: on force les cartes à être 
-  les unes au-dessus des autres **/
-   .conteneur-cards-h {
+  /** MQ:  TEL***: on force les cartes
+   à être   les unes au-dessus des autres **/
+  .conteneur-cards-h {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -1209,7 +1466,7 @@ le plus d'espace vide intermédiaire */
     align-items: center;
     padding: 0;
     margin: 0;
-}
+  }
 
   .conteneur-cards-a {
     width: 100%;
@@ -1217,35 +1474,43 @@ le plus d'espace vide intermédiaire */
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5px;
-    margin: 0 0;
+    padding-top: 0;
+    margin: 0 0 0 0;
   }
 
   /* MQ * TEL : la carte unique prend 
-   presque toute la largeur, ajout d'ombres ***/
-   .card-h {
+   presque toute la largeur, 
+   ajout d'ombres ***/
+
+  /** !!!!! à revoir !!!**/
+  .card-h {
     width: 335px;
     height: 200px;
     max-width: none;
     max-height: none;
-    box-shadow: 10px 10px 30px #f0f0f0, 10px 10px 30px #f0f0f0, -10px -10px 30px #f0f0f0, -10px -10px 30px #f0f0f0;
+    box-shadow: 5px 5px 30px #f0f0f0, 5px 5px 5px #f0f0f0, -5px -5px 5px #f0f0f0, -5px -5px 5px #f0f0f0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 27px;
+    margin-bottom: 11px;
     border-radius: 25px;
     background-color: white;
     border: 5px solid white;
-}
-    
+  }
 
   .card-a {
     width: 335px;
     height: 144px;
     margin-bottom: 11px;
   }
-/** MQ: TEL:   ***/
+
+
+  .the-last-card-a {
+    margin-bottom: 35px;
+  }
+
+  /** MQ: TEL:   ***/
   .card-info-a {
     width: calc(202/335 * 100%);
     height: 100%;
@@ -1257,6 +1522,7 @@ le plus d'espace vide intermédiaire */
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
   }
+
   .card-info-h {
     width: 100%;
     height: 40%;
@@ -1266,15 +1532,15 @@ le plus d'espace vide intermédiaire */
     align-items: flex-start;
     padding-left: 10px;
     padding-bottom: 4px;
-    padding-top: 3px;
-}
+    padding-top: 10px;
+  }
+
   .titre-et-prix-a {
     height: 60%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    padding-left: 13px;
-    padding-right: 15px;
+    padding: 0 15px 0 13px;
   }
 
   .card-img-a {
@@ -1285,6 +1551,7 @@ le plus d'espace vide intermédiaire */
     border-top-left-radius: 20px;
     position: relative;
   }
+
   .titre-img-h {
     font-size: 18px;
     width: 100%;
@@ -1292,16 +1559,23 @@ le plus d'espace vide intermédiaire */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
+  }
 
   /** MQ: TEL:   taille  d'écriture***/
+
   .h1-h,
   .h1-a {
     font-size: 36px;
   }
 
   .afficherplus {
-    font-size: 26px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 0 0;
+    height: 67px;
+    padding: 20px 0 0 20px;
   }
 
   /** MQ: TEL   ***/
@@ -1312,7 +1586,7 @@ le plus d'espace vide intermédiaire */
     justify-content: flex-start;
     align-items: center;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 0;
     margin: 0;
   }
 
@@ -1324,14 +1598,14 @@ le plus d'espace vide intermédiaire */
     justify-content: flex-start;
     align-items: center;
     background-color: #f2f2f2;
-    margin-left: 20px;
-    border-radius: 25px;
+    border-radius: 0;
     margin: 0;
-      }
+  }
+
 
   /** MQ: TEL   ***/
   .prix-info-h {
-      font-size: 14px;
+    font-size: 14px;
     width: 100%;
     font-weight: normal;
     overflow: hidden;
@@ -1344,15 +1618,20 @@ le plus d'espace vide intermédiaire */
   }
 
   .appreciation-a {
-    height: 25%;
-    padding-top: 11px;
     padding-left: 13px;
+    height: 25%;
+    padding-top: 10px;
+  }
+
+  .appreciation-h {
+    padding: 0 0 0 0;
   }
 
   /** MQ: TEL   ***/
   .enabled-stars,
   .disabled-stars {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bolder;
   }
 
   .enabled-stars {
@@ -1431,14 +1710,13 @@ le plus d'espace vide intermédiaire */
     z-index: 2;
     font-size: 18px;
     color: white;
-
   }
 
   .loupe {
     font-family: FontAwesome;
     font-size: 18px;
     position: absolute;
-    left: 0px;
+    left: -10px;
     background-color: #0065FC;
     color: white;
     border: 2px solid #0065FC;
@@ -1519,6 +1797,7 @@ le plus d'espace vide intermédiaire */
     left: -20px;
   }
 
+  /** MQ: TEL   ***/
   .critere1 {
     font-size: 16px;
     text-indent: -7px;
@@ -1539,41 +1818,43 @@ le plus d'espace vide intermédiaire */
     text-indent: -7px;
   }
 
+  /** MQ: TEL   ***/
   .info-ico {
     font-family: FontAwesome;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
+    width: 31px;
+    height: 24px;
+    font-size: 12px;
     font-weight: bold;
     color: #0065FC;
     border-radius: 50%;
-    border: 2px solid #d9d9d9;
-    padding-bottom: 20px;
-    padding-right: 7px;
+    border: 1px solid #d9d9d9;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    line-height: 12px;
   }
 
-  .more-than-500-p {
+  .more-than-500-box {
     width: 100%;
     height: 80px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 0 0 0;
-    padding: 0px 0 0 5px;
+    padding: 18px 0 0 0px;
   }
 
-  .link-economique {}
+  .more-than-500-text {
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    padding: 3px 0 0 11px;
+  }
 
-  .link-familial {}
-
-  .link-romantique {}
-
-  .link-animaux {}
 
   /**MQ TEL : ASIDE ****/
   .titre-h1-a {
@@ -1582,35 +1863,37 @@ le plus d'espace vide intermédiaire */
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
-    margin-top: 35px;
-    margin-bottom: 20px;
+    margin: 0;
+    height: 90px;
+    padding: 10px 10px 0 20px;
   }
+
   .titre-h1-h {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     height: 80px;
-    padding-left: 15px;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-top: 26px;
-}
+    padding: 19px 0 0 20px;
+    margin: 0 0 0 0;
+  }
 
+  /**MQ TEL  ****/
   .h1-a {
     width: 100%;
     font-size: 22px;
     font-weight: bold;
     text-align: left;
-    margin: 16px 0;
+    margin: 0;
   }
+
   .h1-h {
     font-size: 22px;
     font-weight: bold;
     text-align: left;
-}
+  }
 
   .black-star {
     font-family: FontAwesome;
@@ -1618,8 +1901,287 @@ le plus d'espace vide intermédiaire */
     font-size: 22px;
   }
 
+  /**MQ  TEL ***/
+  /**Activités ***/
+
+  .section-activites {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 0 0 0;
+  }
+
+  .titre-h1-activites {
+    width: 100%;
+    padding: 22px 0 0 22px;
+    height: 78px;
+    margin: 0 0 3px 0;
+  }
+
+  .conteneur-cards-activites {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /**MQ  TEL *****/
+  /**** CARTES Activités ***/
+  /** DIMENSIONS***/
+  .carte-1,
+  .carte-3 {
+    width: 333px;
+    height: 191px;
+    margin: 0 0 21px 0;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 8px 8px 8px #eeeeee;
+  }
+
+  .carte-2,
+  .carte-4 {
+    width: 333px;
+    height: calc(191px + 24px + 191px);
+    margin: 0 0 21px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /**MQ  TEL *****/
+  .carte-2-down,
+  .carte-2-up,
+  .carte-4-down,
+  .carte-4-up {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 8px 8px 8px #eeeeee;
+    width: 333px;
+    height: 191px;
+  }
+
+  .carte-1-img,
+  .carte-2-down-img,
+  .carte-2-up-img,
+  .carte-3-img,
+  .carte-4-down-img,
+  .carte-4-up-img {
+    width: 100%;
+    height: calc((134/191) * 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /**MQ  TEL *****/
+  .carte-1-titre,
+  .carte-2-down-titre,
+  .carte-2-up-titre,
+  .carte-3-titre,
+  .carte-4-down-titre,
+  .carte-4-up-titre {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    height: calc((57/191) * 100%);
+  }
+
+  /**MQ  TEL Activités ***/
+  .carte-1-titre {
+    padding: 21px 0 0 20px;
+  }
+
+  .carte-2-down-titre {
+    padding: 20px 0 0 20px;
+  }
+
+  .carte-2-up-titre {
+    padding: 23px 0 0 17px;
+  }
+
+  .carte-3-titre {
+    padding: 18px 0 0 20px;
+  }
+
+  .carte-3-titre {
+    padding: 18px 0 0 20px;
+  }
+
+  .carte-4-up-titre {
+    padding: 20px 0 0 20px;
+  }
+
+  .carte-4-down-titre {
+    padding: 20px 0 0 20px;
+  }
+
+  /**MQ  TEL Activités ***/
+  /***object-position: 50% 45%; ???***/
+  .carte-1-img img {
+    height: 140%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .carte-2-down-img img {
+    height: 140%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-position: 50% 45%;
+  }
+
+  .carte-2-up-img img {
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-position: 50% 45%;
+  }
+
+  /**MQ  TEL Activités ***/
+  .carte-3-img img {
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-position: 50% 45%;
+  }
+
+  .carte-4-up-img img {
+    height: 140%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-position: 50% 45%;
+  }
+
+  .carte-4-down-img img {
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-position: 50% 45%;
+  }
+
+  /**MQ  TEL FOOTER  ***/
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+       background-color: #f2f2f2;
+    margin: 27px 0 0 0;
+    padding: 30px 21px 0 21px;
+    
+  }
+
+  .a-propos {
+    width: 315px;
+    height: 177px;
+    padding: 15px 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  .nos-hebergements {
+    width: 315px;
+    height: 112px;
+    padding: 0 0 0 0;
+    margin: 0 0 30px 0;
+  }
+
+  .assistance {
+    width: 315px;
+    height: 134px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  .a-propos h2,
+  .nos-hebergements h2,
+  .assistance h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .a-propos h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 0;
+  }
+
+  .nos-hebergements h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 0;
+  }
+
+  .assistance h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 0;
+  }
+
+  .a-propos p,
+  .nos-hebergements p,
+  .assistance p {
+    font-size: 16px;
+    font-weight: normal;
+
+  }
+
+  /**.a-propos */
+  .fonctionnement {
+    padding: 0 0 0 0;
+    margin: 0 0 13px 0;
+  }
+
+  /**.a-propos */
+  .cgv {
+    padding: 0 0 0 0;
+    margin: 0 0 13px 0;
+  }
+
+  /**.a-propos */
+  .data {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  /*.nos-hebergements*/
+  .qualite {
+    padding: 0 0 0 0;
+    margin: 0 0 12px 0;
+  }
+
+  /*.nos-hebergements*/
+  .soumettre {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+
+  /*.assistance*/
+  .aide {
+    padding: 0 0 0 0;
+    margin: 0 0 13px 0;
+  }
+
+  /*.assistance*/
+  .contact {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
 
 }
 
-/************ END  of   media queries **************************/
-
+/** END of  MQ TEL ***/
+/**** END  of   media queries ******** */
