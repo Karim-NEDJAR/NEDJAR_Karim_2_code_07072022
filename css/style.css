@@ -1201,38 +1201,98 @@ le plus d'espace vide intermédiaire */
 
   /** MQ:  TEL***: on force les cartes à être 
   les unes au-dessus des autres **/
-  .conteneur-cards-h {
+   .conteneur-cards-h {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-  }
+    padding: 0;
+    margin: 0;
+}
 
   .conteneur-cards-a {
     width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    margin: 0 0;
   }
 
   /* MQ * TEL : la carte unique prend 
    presque toute la largeur, ajout d'ombres ***/
-  .card-h {
-    width: 90%;
-    height: 60vw;
+   .card-h {
+    width: 335px;
+    height: 200px;
     max-width: none;
     max-height: none;
-    box-shadow: 10px 10px 30px #f0f0f0,
-      10px 10px 30px #f0f0f0,
-      -10px -10px 30px #f0f0f0,
-      -10px -10px 30px #f0f0f0;
-  }
+    box-shadow: 10px 10px 30px #f0f0f0, 10px 10px 30px #f0f0f0, -10px -10px 30px #f0f0f0, -10px -10px 30px #f0f0f0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 27px;
+    border-radius: 25px;
+    background-color: white;
+    border: 5px solid white;
+}
+    
 
   .card-a {
-    width: 90%;
-    height: 26vw;
-    max-width: none;
-    max-height: none;
-    margin-bottom: 5vw;
+    width: 335px;
+    height: 144px;
+    margin-bottom: 11px;
   }
+/** MQ: TEL:   ***/
+  .card-info-a {
+    width: calc(202/335 * 100%);
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border: 5px solid white;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .card-info-h {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    padding-top: 3px;
+}
+  .titre-et-prix-a {
+    height: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding-left: 13px;
+    padding-right: 15px;
+  }
+
+  .card-img-a {
+    width: calc(133/335*100%);
+    height: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+  }
+  .titre-img-h {
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
   /** MQ: TEL:   taille  d'écriture***/
   .h1-h,
@@ -1246,19 +1306,19 @@ le plus d'espace vide intermédiaire */
 
   /** MQ: TEL   ***/
   main {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
     background-color: white;
     border-radius: 25px;
-    margin: 0.8vw;
+    margin: 0;
   }
 
   /** MQ: TEL   ***/
   aside {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1266,31 +1326,54 @@ le plus d'espace vide intermédiaire */
     background-color: #f2f2f2;
     margin-left: 20px;
     border-radius: 25px;
-    margin: 1vw;
-  }
+    margin: 0;
+      }
 
   /** MQ: TEL   ***/
   .prix-info-h {
-    font-size: 24px;
+      font-size: 14px;
+    width: 100%;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .prix-info-a {
-    font-size: 28px;
+    font-size: 14px;
     font-weight: normal;
+  }
+
+  .appreciation-a {
+    height: 25%;
+    padding-top: 11px;
+    padding-left: 13px;
   }
 
   /** MQ: TEL   ***/
   .enabled-stars,
   .disabled-stars {
-    font-size: 24px;
+    font-size: 14px;
+  }
+
+  .enabled-stars {
+    color: #0065FC;
+  }
+
+  .disabled-stars {
+    color: #D9D9D9;
   }
 
   .titre-img-h {
-    font-size: 24px;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .titre-img-a {
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
   }
 
   .saisie-ville {
@@ -1464,12 +1547,14 @@ le plus d'espace vide intermédiaire */
     align-items: center;
     width: 25px;
     height: 25px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: #0065FC;
     border-radius: 50%;
     border: 2px solid #d9d9d9;
-      }
+    padding-bottom: 20px;
+    padding-right: 7px;
+  }
 
   .more-than-500-p {
     width: 100%;
@@ -1480,7 +1565,7 @@ le plus d'espace vide intermédiaire */
     align-items: center;
     margin: 0 0 0 0;
     padding: 0px 0 0 5px;
-      }
+  }
 
   .link-economique {}
 
@@ -1490,52 +1575,51 @@ le plus d'espace vide intermédiaire */
 
   .link-animaux {}
 
+  /**MQ TEL : ASIDE ****/
+  .titre-h1-a {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  .titre-h1-h {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-top: 26px;
+}
+
+  .h1-a {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin: 16px 0;
+  }
+  .h1-h {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+
+  .black-star {
+    font-family: FontAwesome;
+    color: black;
+    font-size: 22px;
+  }
+
 
 }
 
 /************ END  of   media queries **************************/
 
-
-/** début du FILIGRANE  **/
-
-body {
-  position: relative;
-  width: 375px;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-}
-
-.booky {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-}
-
-.trame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-}
-
-.trame img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-
-.carte-3,
-.carte-1,
-.carte-2-down,
-.carte-2-up,
-.carte-4-down,
-.carte-4-up {
-  background: none;
-}
-
-/** fin du FILIGRANE  **/
