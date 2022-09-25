@@ -400,9 +400,9 @@ input[type="search"] {
 }
 
 
-/*****  MAIN     ******/
+/*****  .bloc-hebergements     ******/
 
-main {
+.bloc-hebergements {
   width: calc(100% - 570px);
   display: flex;
   flex-flow: column nowrap;
@@ -425,7 +425,7 @@ main {
   padding-top: 5px;
 }
 
-/***MAIN:   **/
+/***.bloc-hebergements:   **/
 
 .card-h {
   height: calc(200px * 1.0);
@@ -1117,7 +1117,7 @@ le plus d'espace vide intermédiaire */
   }
 
   /*** MQ: TAB ****/
-  main {
+  .bloc-hebergements {
     width: 100%;
     margin: 0 0 30px 0;
     padding: 0 0 0 0;
@@ -1579,7 +1579,7 @@ le plus d'espace vide intermédiaire */
   }
 
   /** MQ: TEL   ***/
-  main {
+  .bloc-hebergements {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
