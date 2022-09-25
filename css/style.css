@@ -1207,7 +1207,7 @@ le plus d'espace vide intermédiaire */
   /*** MQ: TAB ***************************/
 
   footer {
-        width: calc(100vw - 40px);
+    width: calc(100vw - 40px);
     height: 230px;
     background-color: white;
     margin: 20px 20px;
@@ -1233,7 +1233,7 @@ le plus d'espace vide intermédiaire */
   }
 
   .assistance {
-        width: calc((100% - 205px) /2);
+    width: calc((100% - 205px) /2);
     height: 100%;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
@@ -2082,10 +2082,10 @@ le plus d'espace vide intermédiaire */
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-       background-color: #f2f2f2;
+    background-color: #f2f2f2;
     margin: 27px 0 0 0;
     padding: 30px 21px 0 21px;
-    
+
   }
 
   .a-propos {
