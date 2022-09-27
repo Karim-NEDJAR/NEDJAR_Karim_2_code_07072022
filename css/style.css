@@ -20,7 +20,7 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-.wrapper {
+main {
   width: 100%;
   margin-top: 25px;
 }
@@ -1482,8 +1482,7 @@ le plus d'espace vide intermédiaire */
    presque toute la largeur, 
    ajout d'ombres ***/
 
-  /** !!!!! à revoir !!!**/
-  .card-h {
+    .card-h {
     width: 335px;
     height: 200px;
     max-width: none;
@@ -2018,8 +2017,7 @@ le plus d'espace vide intermédiaire */
   }
 
   /**MQ  TEL Activités ***/
-  /***object-position: 50% 45%; ???***/
-  .carte-1-img img {
+    .carte-1-img img {
     height: 140%;
     width: 100%;
     object-fit: cover;
@@ -2182,6 +2180,5 @@ le plus d'espace vide intermédiaire */
   }
 
 }
-
 /** END of  MQ TEL ***/
 /**** END  of   media queries ******** */
