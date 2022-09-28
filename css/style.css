@@ -348,8 +348,9 @@ input[type="search"] {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 25px 20px;
-}
+  padding: 25px 20px;
+  margin: 0 0 0 0;
+  }
 
 .more-than-500-text {
   font-size: 16px;
@@ -985,14 +986,12 @@ le plus d'espace vide intermédiaire */
 /*** MQ: TAB ****/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .nav-hebergements:hover {
-    border-top: 3px solid #0065FC;
-    border-bottom: 3px solid #0065FC;
+       border-bottom: 3px solid #0065FC;
     color: #0065FC;
   }
 
   .nav-activites:hover {
-    border-top: 3px solid #0065FC;
-    border-bottom: 3px solid #0065FC;
+      border-bottom: 3px solid #0065FC;
     color: #0065FC;
   }
 
@@ -1228,9 +1227,7 @@ le plus d'espace vide intermédiaire */
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     text-align: center;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-  }
+      }
 
   .assistance {
     width: calc((100% - 205px) /2);
