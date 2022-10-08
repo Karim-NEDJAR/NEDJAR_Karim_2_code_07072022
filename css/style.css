@@ -1328,7 +1328,6 @@ le plus d'espace vide intermédiaire */
   .nav-activites:hover {
     border-bottom: 5px solid #0065FC;
   }
-
   .nav-hebergements,
   .nav-activites {
     width: 50%;
